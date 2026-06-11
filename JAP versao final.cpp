@@ -1,8 +1,8 @@
-/* IFSP - Campus Cubat„o/SP
- Curso: TÈcnico em AutomaÁ„o Industrial
+/* IFSP - Campus Cubat√£o/SP
+ Curso: T√©cnico em Automa√ß√£o Industrial
  turma: CTA: 271 - noturmo / ano 2026
- Disciplina: CBTPROG - ProgramaÁ„o
- Aluno: Ramon Matheus Costa Almeida (matrÌcula: cb3042847)
+ Disciplina: CBTPROG - Programa√ß√£o
+ Aluno: Ramon Matheus Costa Almeida (matr√≠cula: cb3042847)
 */
 
 /*## JOGO: "ACERTOU, PERDEU #########
@@ -11,35 +11,35 @@
 ##
 ## REGRAS:
 ##
-## 1) Quantidade de jogadores: mÌnima 2, m·xima 5.
+## 1) Quantidade de jogadores: m√≠nima 2, m√°xima 5.
 ##______________________________________________________________________________________________________
-## 2) Ser· fornecido um n˙mero oculto e aleatÛrio, dentro dos limites: maior 1 e menor que 100; ou seja, 
-##		os jogadores n„o saber„o qual n˙mero escolhido È esse.
+## 2) Ser√° fornecido um n√∫mero oculto e aleat√≥rio, dentro dos limites: maior 1 e menor que 100; ou seja, 
+##		os jogadores n√£o saber√£o qual n√∫mero escolhido √© esse.
 ##______________________________________________________________________________________________________
-## 3) O jogador que adivinhar qual È esse n˙mero, perde. E o jogo acaba.
+## 3) O jogador que adivinhar qual √© esse n√∫mero, perde. E o jogo acaba.
 ##______________________________________________________________________________________________________
-## 4) No inÌcio do jogo, cada jogador em seu turno ter· que "chutar" um valor/ adivinhar esse valor
-##		informando via teclado um n˙mero dentro do limite inicial (vide no item 2).
+## 4) No in√≠cio do jogo, cada jogador em seu turno ter√° que "chutar" um valor/ adivinhar esse valor
+##		informando via teclado um n√∫mero dentro do limite inicial (vide no item 2).
 ##______________________________________________________________________________________________________
-## 5) A cada valor informado, o limites m·x e mÌn. ser„o alterados, tendendo ao valor oculto/ de modo a
+## 5) A cada valor informado, o limites m√°x e m√≠n. ser√£o alterados, tendendo ao valor oculto/ de modo a
 ##		se aproximar do valor oculto.
 ##______________________________________________________________________________________________________
-## 6) Durante o turno do jogador, se o n˙mero informado por ele for igual ao valor oculto,
-##		(conforme o item 3) ser· retornado a mensagem "VocÍ perdeu", e o jogo/ programa ser· encerrado.
+## 6) Durante o turno do jogador, se o n√∫mero informado por ele for igual ao valor oculto,
+##		(conforme o item 3) ser√° retornado a mensagem "Voc√™ perdeu", e o jogo/ programa ser√° encerrado.
 ##______________________________________________________________________________________________________
-## 7) O turno do jogador dura atÈ o momento em que ele informa um n˙mero dentro do limite vigente.
-##		Assim que ele informa um n˙mero v·lido , o turno dele se encerrado e o turno do prÛximo
+## 7) O turno do jogador dura at√© o momento em que ele informa um n√∫mero dentro do limite vigente.
+##		Assim que ele informa um n√∫mero v√°lido , o turno dele se encerrado e o turno do pr√≥ximo
 ##		jogador se inicia.
 ##______________________________________________________________________________________________________ 
-## 8) Quando o turno de todos os jogadores terminar, enquanto nenhum deles acertar qual È o valor oculto,
-##		ser· repetido os turnos dos jogadores, comeÁando novamente do primeiro ao ˙ltimo jogador,##		como um ciclo sem fim, atÈ que um jogador acerte o valor oculto.
+## 8) Quando o turno de todos os jogadores terminar, enquanto nenhum deles acertar qual √© o valor oculto,
+##		ser√° repetido os turnos dos jogadores, come√ßando novamente do primeiro ao √∫ltimo jogador,##		como um ciclo sem fim, at√© que um jogador acerte o valor oculto.
 ##______________________________________________________________________________________________________
-## 9) O valor oculto ser· gerado de forma randÙmica/ aleatÛria, via cÛdigo. Conforme o item 2,
-##		os jogadores n„o devem saber qual n˙mero foi escolhido.
+## 9) O valor oculto ser√° gerado de forma rand√¥mica/ aleat√≥ria, via c√≥digo. Conforme o item 2,
+##		os jogadores n√£o devem saber qual n√∫mero foi escolhido.
 ##______________________________________________________________________________________________________ 
 ## 10) Em cada turno, se o jogador informar um valor fora do limite:
-##		a. Na primeira vez, informe a mensagem "valor fora do limite, Digite novamente um n˙mero"...
-##		b. Na segunda vez seguida, informe a mensagem "VocÍ digitou novamente um valor fora do limite, Digite novamente um n˙mero"...
+##		a. Na primeira vez, informe a mensagem "valor fora do limite, Digite novamente um n√∫mero"...
+##		b. Na segunda vez seguida, informe a mensagem "Voc√™ digitou novamente um valor fora do limite, Digite novamente um n√∫mero"...
 ###		c. Na terceira vez seguida, informe a mensagem 
 #####
 ###################################################################################### 
@@ -63,8 +63,8 @@ int main(int argc, char** argv)
 	int erro_palpites = 0; //usado p/ contar a qtde. de palpites fora dos limites.
 	
 //* (aluno) [I - GUARDAR NOMES DOS JOGADORES] **********************************	
-	//Vetor jogador[] guardar· os nomes dos jogadores
-	//Iniciando vetor c/ nomes genÈricos.
+	//Vetor jogador[] guardar√° os nomes dos jogadores
+	//Iniciando vetor c/ nomes gen√©ricos.
 	string jogador[] 
 	{
 	"Jogador 1",
@@ -74,7 +74,7 @@ int main(int argc, char** argv)
 	"Jogador 5"
 	};
 	
-	int escolherNome = 2; //por definiÁ„o 2, porque -> OpÁ„o 1: Definir nomes, opÁ„o 2: Sair.
+	int escolherNome = 2; //por defini√ß√£o 2, porque -> Op√ß√£o 1: Definir nomes, op√ß√£o 2: Sair.
 	
 	cout<<"### JOGO: ACERTOU, PERDEU ###\n";
 	cout<<"\nLimite de Jogadores: \n* min. 2\n* max. 5"<<endl;
@@ -101,25 +101,25 @@ int main(int argc, char** argv)
 
 
 //******************************************************************************	
-	//(aluno)[III - IDENTIFICA«√O DOS JOGADORES].
+	//(aluno)[III - IDENTIFICA√á√ÉO DOS JOGADORES].
 	do
 	{
 		cout << "\nDeseja dar nome os jogadores? (1 - Sim/ 2 - Nao) -> ";
 		cin >> escolherNome;
 		
-		//por definiÁ„o -> OpÁ„o 1: Definir nomes, opÁ„o 2: Sair (fica os nomes genÈricos).		
+		//por defini√ß√£o -> Op√ß√£o 1: Definir nomes, op√ß√£o 2: Sair (fica os nomes gen√©ricos).		
 		if(escolherNome == 1)
 		{
 			do
 			{
 				cout<<"Nome do jogador "<< vez <<" -> ";
-				cin>>jogador[(vez-1)]; //È feito o decremento tempor·rio pois: vetor 'jogador[0-4]' e vari·vel 'vez'(de 1 a 5)
+				cin>>jogador[(vez-1)]; //√© feito o decremento tempor√°rio pois: vetor 'jogador[0-4]' e vari√°vel 'vez'(de 1 a 5)
 				
 				++vez; // Alterando do Jogador 1 ao 5
 			}
 			while(vez <= qtde);
 			
-			vez = 1; //volta a vez p/ o Jogador 1 antes de comeÁar o jogo
+			vez = 1; //volta a vez p/ o Jogador 1 antes de come√ßar o jogo
 		}
 		else
 		{
@@ -141,8 +141,8 @@ int main(int argc, char** argv)
 			}
 		}
 
-		//(ManutenÁ„o) Exibir conte˙do da vari·vel 'escolherNome'.
-		//cout<<"\n(ManutenÁ„o)Exibir *EscolherNome* = "<<escolherNome; 
+		//(Manuten√ß√£o) Exibir conte√∫do da vari√°vel 'escolherNome'.
+		//cout<<"\n(Manuten√ß√£o)Exibir *EscolherNome* = "<<escolherNome; 
 		
 		/* cout<<"\\n(Manutencao) Exibindo os nomes dos jogadores"<<endl;
 		
@@ -157,12 +157,12 @@ int main(int argc, char** argv)
 //##############################################################################
 	
 // [IV - GERANDO VALOR OCULTO]
-	srand (time(NULL)); // "semeando" um valor aleatÛrio com base na data e hora atual.
-	oculto = rand() % 100;// gerando um valor aleatÛrio.
+	srand (time(NULL)); // "semeando" um valor aleat√≥rio com base na data e hora atual.
+	oculto = rand() % 100;// gerando um valor aleat√≥rio.
 	
-	//(ManutenÁ„o) cout<<"\n oculto: "<<oculto<<endl;
+	//(Manuten√ß√£o) cout<<"\n oculto: "<<oculto<<endl;
 	
-	// [V - INÕCIO DO JOGO]	
+	// [V - IN√çCIO DO JOGO]	
 	cout<<"\n[INICIO DO JOGO]\n";
 
 	 // Representa o LOOPING principal do programa
@@ -175,9 +175,9 @@ int main(int argc, char** argv)
    	        cout << jogador[vez-1]<< ", informe numero entre " << li << " e " << ls << ": ";
  	        cin >> palpite;
  	        
- 	        //[VI - ERRO DE PALPITE]
+ 	        //[VI - VERIFICA O PALPITE]
  	        
- 	        //(aluno) Avisa ao jogador que o palpite est· errado/ fora dos limites
+ 	        //(aluno) Avisa ao jogador que o palpite est√° errado/ fora dos limites
 			 if (palpite <= li || palpite >= ls)
 			 {
 			 	++erro_palpites;// conta a qtde de erros de palpite
@@ -192,12 +192,12 @@ int main(int argc, char** argv)
 					   	break;
 					   case 3:
 					   	cout<<"\n<!> Sem condicao. Voce nao tem condicao de continuar participando. Voce perdeu!\n";
-					   	//atribuÌdo o valor de oculto ao 'palpite' p/ sair do looping,...
+					   	//atribu√≠do o valor de oculto ao 'palpite' p/ sair do looping,...
 					   	//... e exibir a mensagem de que esse jogador perdeu.
 						   palpite = oculto; 
 					   	break;
 					   default:
-					   	cout<<"\n<!> Erro. O jogo ser· encerrado.\n";
+					   	cout<<"\n<!> Erro. O jogo ser√° encerrado.\n";
 					   	palpite = oculto;// foi colocado dessa forma p/ sair do looping...
 					   	break;
 				}
@@ -207,7 +207,7 @@ int main(int argc, char** argv)
 //******************************************************************************
 //(aluno) [VII - RESET NO CONTADOR DE ERROS DO PALPITE
 
-     	//Se ainda h· como continuar o  jogo (palpite n„o È igual ao oculto)...
+     	//Se ainda h√° como continuar o  jogo (palpite n√£o √© igual ao oculto)...
      	//...zera o contador de erros;
      	if (palpite != oculto)
 		 {
